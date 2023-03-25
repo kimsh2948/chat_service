@@ -20,7 +20,7 @@ public class ChatHandler implements WebSocketHandler {
 
     @Override
     public Mono<Void> handle(WebSocketSession webSocketSession) {
-        System.out.println("open");
+        log.info("open-chat");
         Flux<ChatMessage> chatMessageFlux = this.chatMessageRepository.findWithTailableCursorBy();
 
         Flux<String> messageFlux = webSocketSession.receive()

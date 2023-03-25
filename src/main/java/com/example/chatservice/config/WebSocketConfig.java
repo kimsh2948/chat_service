@@ -21,7 +21,6 @@ public class WebSocketConfig {
     public HandlerMapping webSocketHandlerMapping() {
         Map<String, WebSocketHandler> map = new HashMap<>();
         map.put("/chat", chatHandler);
-        System.out.println("open2");
 
         SimpleUrlHandlerMapping handlerMapping =  new SimpleUrlHandlerMapping();
         handlerMapping.setOrder(1);
