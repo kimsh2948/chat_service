@@ -1,5 +1,6 @@
 package com.example.chatservice.domain;
 
+import lombok.Data;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -7,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 
 @Document(collection = "chat_messages")
-@Getter
+@Data
 public class ChatMessage {
 
     @Id
