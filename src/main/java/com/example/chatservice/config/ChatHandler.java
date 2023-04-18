@@ -52,7 +52,7 @@ public class ChatHandler implements WebSocketHandler {
                 });
 
         return webSocketSession.send(
-                chatMessageFlux.merge(chatMessageStringFlux).map(webSocketSession::textMessage).log()
+                chatMessageStringFlux.map(webSocketSession::textMessage).log()
         );
     }
 
